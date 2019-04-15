@@ -27,7 +27,7 @@ describe 'postgresql::server', type: :class do
     it { is_expected.to contain_class('postgresql::params') }
     it { is_expected.to contain_class('postgresql::server') }
     it {
-      is_expected.to contain_exec('postgresql_reload').with('command' => 'service postgresql reload')
+      is_expected.to contain_exec('postgresql reload').with('command' => 'service postgresql reload')
     }
     it 'validates connection' do
       is_expected.to contain_postgresql_conn_validator('validate_service_is_running')
@@ -98,7 +98,7 @@ describe 'postgresql::server', type: :class do
     it { is_expected.to contain_class('postgresql::params') }
     it { is_expected.to contain_class('postgresql::server') }
     it {
-      is_expected.to contain_exec('postgresql_reload').with('command' => '/bin/true')
+      is_expected.to contain_exec('postgresql reload').with('command' => '/bin/true')
     }
     it 'validates connection' do
       is_expected.to contain_postgresql_conn_validator('validate_service_is_running')
