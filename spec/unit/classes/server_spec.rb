@@ -128,7 +128,7 @@ describe 'postgresql::server', type: :class do
     end
 
     it 'removes the package' do
-      is_expected.to contain_package('postgresql-server').with(ensure: 'purged')
+      is_expected.to contain_package('postgresql server').with(ensure: 'purged')
     end
 
     it 'stills enable the service' do

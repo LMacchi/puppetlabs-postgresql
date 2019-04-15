@@ -10,7 +10,7 @@ class postgresql::server::install {
     default => $package_ensure,
   }
 
-  package { 'postgresql-server':
+  package { 'postgresql server':
     ensure => $_package_ensure,
     name   => $package_name,
 
